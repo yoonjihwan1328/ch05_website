@@ -5,6 +5,8 @@
 from django.urls import path
 from . import views
 urlpatterns = [
-    path('', views.index),
-    path('<int:pk>/', views.detial, name='detail'),
+    path('', views.PostList.as_view()),
+    path('<int:pk>/', views.PostDetail.as_view(), name='detail')
+#    path('', views.index),
+#    path('<int:pk>/', views.detail, name='detail'),
 ]
